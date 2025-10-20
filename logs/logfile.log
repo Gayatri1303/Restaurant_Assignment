@@ -1,0 +1,1 @@
+ERROR:logs.custom_logger:repository.data_handler: Enter name of type str not int
