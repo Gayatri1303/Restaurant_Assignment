@@ -4,7 +4,9 @@ WORKDIR /app
 
 COPY . .
 
-RUN "curl -sSL https://install.python-poetry.org"
+RUN apt-get update && apt-get install -y curl
+
+RUN curl -sSL https://install.python-poetry.org
 
 ENV PATH="/root/.local/bin:${PATH}"
 
