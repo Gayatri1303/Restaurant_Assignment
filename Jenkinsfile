@@ -14,10 +14,10 @@ pipeline
         stage('Build') {
             steps 
             {
-                sh "apt-get update"
-                sh "apt-get upgrade"
-                sh "apt install docker.io"
-                sh "docker build -t fastapi:latest ."
+                sh "sudo apt-get update"
+                sh "sudo apt-get upgrade"
+                sh "sudo apt install docker.io"
+                sh "sudo docker build -t fastapi:latest ."
                 
 
         }
@@ -28,8 +28,8 @@ pipeline
             stage('Push to registry') {
             steps 
             {
-                sh "docker tag fastapi:latest gayatri491/fastapi:latest"
-                sh "docker push gayatri491/fastapi:latest"
+                sh "sudo docker tag fastapi:latest gayatri491/fastapi:latest"
+                sh "sudo docker push gayatri491/fastapi:latest"
                 
 
         }
