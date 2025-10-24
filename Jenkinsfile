@@ -1,9 +1,6 @@
 pipeline 
 {
-    agent any
-    options {
-            skipDefaultCheckout true
-        }
+   
     stages 
     {
         stage('Code') {
@@ -15,10 +12,10 @@ pipeline
         stage('Build') {
             steps 
             {
-                sh "sudo apt-get update"
-                sh "sudo apt-get upgrade"
-                sh "sudo apt install docker.io"
-                sh "sudo docker build -t fastapi:latest ."
+                sh "apt-get update"
+                sh "apt-get upgrade"
+                sh "apt install docker.io"
+                sh "docker build -t fastapi:latest ."
                 
 
         }
