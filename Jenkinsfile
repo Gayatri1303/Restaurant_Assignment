@@ -13,6 +13,7 @@ pipeline
             steps 
             {
                 sh "sudo apt-get update"
+                sh "RUN apt-get update && apt-get install -y curl"
                 sh "sudo docker build -t fastapi:latest ."
                 
 
