@@ -13,8 +13,6 @@ pipeline
             steps 
             {
                 sh "sudo apt-get update"
-                sh "sudo apt-get upgrade -y"
-                sh "sudo apt install docker.io -y"
                 sh "sudo docker build -t fastapi:latest ."
                 
 
