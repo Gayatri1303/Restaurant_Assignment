@@ -6,12 +6,11 @@ pipeline
         }
     stages 
     {
-        stage(' Code') {
-            steps 
-            {
-               sh "git clone https://github.com/Gayatri1303/Restaurant_Assignment"
-                }
+        stage('Code') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Gayatri1303/Restaurant_Assignment.git'
             }
+    }
         
         stage('Build') {
             steps 
